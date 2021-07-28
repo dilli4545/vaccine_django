@@ -1,0 +1,77 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration</title>
+</head>
+<body>
+  <div class="container  mb-3 py-4">
+    <h1 style="position: absolute;
+    top: 10px;
+    left: 555px;">Registeration for Vaccine</h1>
+     <form action="http://127.0.0.1:8000/register2" method="POST">
+          {% csrf_token %}
+          <h1 style="position: absolute;
+                 top: 50px;
+                 right: 475px;">
+          <div class="form-group">
+          <lable for="name" style="font-size: 20px;"></label>Name <span class="required">*</span>
+              <input type="text" class="form-control" id="first_name" name="name" placeholder="name">
+          </div>
+      
+          <lable for="age" style="font-size: 20px;"></label>Age <span class="required">*</span>
+            <input type="number" class="form-control" id="age" name="age" placeholder="age">
+        </div>
+          <h1 style="position: absolute;
+                 top: 130px;
+                 right: 300px;">
+
+            <div class="form-group">
+            <lable for="gender" style="font-size: 20px;"></label>Gender <span class="required">*</span>
+              <input type="text" class="form-control" id="gender" name="gender" placeholder="gender">
+          </div>
+       
+          <div class="form-group">
+            <label for="email" style="font-size: 20px;">Email Address </label> <span class="required">*</span>
+            <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com">
+          </div>
+       
+          <div class="form-group">
+            <label for="aadhar" style="font-size: 20px;">Aadhar number</label> <span class="required">*</span>
+              <input type="number" class="form-control" id="aadhar" name="aadhar" placeholder="aadhar">
+          </div>
+          
+          <div class="form-group">
+            <label for="address" style="font-size: 20px;">Address(Permanent)</label> <span class="required">*</span>
+            <input class="form-control" id="address"  name="address" placeholder="Enter the Permanent Address"></textarea>
+          </div>
+       
+          <div class="form-group">
+            <lable for="vaccine" style="font-size: 20px;">Vaccine Name</label> <span class="required">*</span>
+              <input type="text" class="form-control" id="vaccine" name="vaccine" placeholder="Enter vaccine Name">
+          </div>
+        
+          <div class="form-group">
+            <lable for="dose" style="font-size: 20px;">Dose</label> <span class="required">*</span>
+              <input type="number" class="form-control" id="dose" name="dose" placeholder="Enter Dose Number">
+          </div>
+        
+        
+          <div class="form-group">
+              <lable for="location" style="font-size: 20px;">Location </label> <span class="required">*</span>
+                <input type="text" class="form-control" id="location" name="location" placeholder="Location for vaccine">
+            </div>
+        
+          <div class="form-group">
+            <lable for="time" style="font-size: 20px;">Preffered date and time</lable></label> <span class="required">*</span>
+              <input type="datetime-local" class="form-control" id="time" name="time" placeholder="Date and time for vacination">
+          </div>
+          
+          <input type="submit" value="submit" name="">
+
+    </form>
+</body>
+</html>

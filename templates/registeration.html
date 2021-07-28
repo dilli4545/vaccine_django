@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <title>Registration</title>
+</head>
+<body>
+    <form action="registeration" method="post">
+        {% csrf_token %}
+
+        <input type="text" name="Name" placeholder="Name"><br>
+        <input type="number" name="Age" placeholder="Age"><br>
+        <input type="text" name="Gender" placeholder="Gender"><br>
+        <input type="number" name="Aadhar number" placeholder="Aadhar number"><br>
+        <input type="text" name="Location" placeholder="Location"><br>
+        <input type="text" name="Vaccine" placeholder="Vaccine"><br>
+        <input type="number" name="Dose1 or 2" placeholder="dose 1 or 2"><br>
+        <input type="datetime-local" name="Preffered Date" placeholder="Preffered Date"><br>
+        <input type="number" name="Mobile number" placeholder="Mobile number"><br>
+        <input type="submit"
+
+
+    </form>
+</body>
+</html>

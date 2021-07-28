@@ -1,0 +1,88 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration</title>
+</head>
+<body>
+  <div class="container  mb-3 py-4">
+    <h1 style="position: absolute;
+    top: 10px;
+    left: 555px;">Registeration for Vaccine</h1>
+     <form action="http://127.0.0.1:8000/register" method="POST">
+          {% csrf_token %}
+          <h1 style="position: absolute;
+          top: 50px;
+          right: 150px;">
+          <div class="form-group">
+          <lable for="name" style="font-size: 20px;"></label>Name <span class="required">*</span>
+              <input type="text" class="form-control" id="first_name" name="name" placeholder="name">
+          </div>
+          
+          <div class="form-group">
+          <lable for="age" style="font-size: 20px;"></label>Age <span class="required">*</span>
+            <input type="number" class="form-control" id="age" name="age" placeholder="age">
+          </div>
+      
+
+          <div class="form-group">
+          <lable for="gender" style="font-size: 20px;"></label>Gender <span class="required">*</span>
+            <input type="text" class="form-control" id="gender" name="gender" placeholder="gender">
+          </div>
+       
+          <div class="form-group">
+          <label for="email" style="font-size: 20px;">Email Address </label> <span class="required">*</span>
+            <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com">
+          </div>
+       
+          <div class="form-group"> 
+          <label for="aadhar" style="font-size: 20px;">Aadhar number</label> <span class="required">*</span>
+            <input type="number" class="form-control" id="aadhar" name="aadhar" placeholder="aadhar">
+          </div>
+          
+       
+          <div class="form-group"> 
+          <lable for="vaccine" style="font-size: 20px;">Vaccine Name</label> <span class="required">*</span>
+            <input type="text" class="form-control" id="vaccine" name="vaccine" placeholder="Enter vaccine Name">
+          </div>
+        
+          <div class="form-group">
+          <lable for="dose" style="font-size: 20px;">Dose</label> <span class="required">*</span>
+            <input type="number" class="form-control" id="dose" name="dose" placeholder="Enter Dose Number">
+          </div>
+        
+        
+          <div class="form-group">
+          <lable for="address" style="font-size: 20px;">Location </label> <span class="required">*</span>
+            <input type="text" class="form-control" id="addresss" name="addresss" placeholder="Location for vaccine">
+          </div>
+
+          <div class="form-group">
+            <lable for="zone" style="font-size: 20px;">ZONE</label> <span class="required">*</span>
+              <input type="number" class="form-control" id="zone" name="zone" placeholder="Enter your zone">
+            </div>
+        
+          <div class="form-group">
+          <lable for="time" style="font-size: 20px;">Preffered date and time</lable></label> <span class="required">*</span>
+            <input type="datetime-local" class="form-control" id="time" name="time" placeholder="Date and time for vacination">
+          </div>
+          
+          <input type="submit" value="submit" name="">
+          <ul>
+            <li><a href="http://127.0.0.1:8000/">Home</a></li>
+          </ul>
+         
+          <div class="form-group">
+          <h1 style="font-size: 15px">
+               {{ messages }}
+            </h1>
+          </div>
+
+    </form>
+    
+
+</body>
+</html>
